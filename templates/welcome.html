@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .logo{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img{
+            width: 40%;
+            border: 3px solid black;
+            border-radius: 50px;
+        }
+        .navbar{
+            display: flex;
+        }
+        .nav-list{
+            width: 100%; 
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-list li{
+            list-style: none;
+            padding: 25px 30px;
+        }
+        
+        .nav-list li a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .nav-list li a:hover{
+            text-decoration: none;
+            color: darkgray;
+        }
+        
+        .right-nav{
+            width: 100%;
+            text-align: center;
+        }
+        
+        #search{
+            padding: 5px;
+            font-size: 17px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    {% load static %}
+    <nav class="navbar">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="{%static 'hat.png'%}" alt="Logo">
+            </div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="right-nav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">search</button>
+        </div>
+    </nav>
+</body>
+</html>
+
+
+
