@@ -1,0 +1,1 @@
+web: gunicorn collegefilters.wsgi --log-file -
