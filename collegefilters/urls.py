@@ -18,14 +18,12 @@ from django.urls import path,include
 from signup.views import signupaction
 from login.views import loginaction
 
-from django.views.static import serve 
-from django.config.urls import url 
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('signup.urls')),
     path('login/',include('login.urls')),
     
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+     
 ]
