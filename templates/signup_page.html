@@ -1,86 +1,81 @@
-<!DOCTYPE html>
-
 <html>
     <head>
         <title>Signup Page</title>
         <style>
-            {
-            margin:0;
-            padding:0;
-            font-family: 'Poppins',sans-serif;
-            box-sizing: border-box;
-        	}
-
-        .backimg img{
+            .backimg img{
                 width: 100%;
                 height: 100vh;
                 position: center;
-        }
-        
-        .container{
-            width: 100%;
-            height: 100vh;
-            background-image: url('D:\TY_PROJECT\collegefilter\static\background.jpg');	
-            background-position: center;
-            background-size: cover;
-            position: center;
-        
-        }
-        
-        .form-box{
-            width: 90%;
-            max-width: 450px;
-            position:absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background:#fff;
-            padding: 50px 60px 70px;
-            text-align: center;
-        }
-        
-        .form-box h1{
-            font-size: 30px;
-            margin-bottom: 60px;
-            color: rgb(66, 138, 167);
-            position:relative;
-        }
-        
-        .form-box h1::after{
-            content: '';
-            width: 30px;
-            height: 4px;
-            border-radius: 3px;
-            background: rgb(66, 138, 167);
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-        
-        }
-        
-        .input-field{
-            background: #eaeaea;
-            margin: 15px 0;
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            max-height: 65px;
-            transition: max-height 0.5s;
-            overflow: hidden;
-        }
-        
-        input{
-            width: 100%;
-            background: transparent;
-            border: 0;
-            outline: 0;
-            padding: 18px 15px;
-        }
-	
-       
-        .btn-field button{
-            flex-basis:58%;
+            }
+
+            .container{
+                width: 100%;
+                height: 100vh;
+                background-image: url('D:\TY_PROJECT\collegefilter\static\background.jpg');
+                background-position: center;
+                background-size: cover;
+                position: center;
+    
+            }
+
+            .form-box{
+                width: 90%;
+                max-width: 330px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background:#fff;
+                padding: 50px 60px 70px;
+                text-align: center;
+            }
+
+            .form-box h1{
+                font-size: 30px;
+                margin-bottom: 60px;
+                color: rgb(66, 138, 167);
+                position:relative;
+            }
+
+            .form-box h1::after{
+                content: '';
+                width: 30px;
+                height: 4px;
+                border-radius: 3px;
+                background: rgb(66, 138, 167);
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+    
+            }
+
+            .input-field{
+                background: #eaeaea;
+                margin: 15px 0;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                max-height: 65px;
+                transition: max-height 0.5s;
+                overflow: hidden;
+            }
+
+            input{
+                width: 100%;
+                background: transparent;
+                border: 0;
+                outline: 0;
+                padding: 18px 15px;
+            }
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+
+            button{
+                flex-basis:58%;
             background:rgb(66, 138, 167);
             color: #fff;
             height: 40px;
@@ -91,62 +86,63 @@
             cursor: pointer;
             transition: background 1s;
 		    float: center;
-        }
-        
-        .input-group{
-            height: 300px;
-        }
-        
-	  
+            }
+            label{
+                font-size: 20px;
+            }
+            
+            button:hover{
+                opacity:0.7;
+
+            }
+            .input-group{
+                height: 300px;
+            }
+    
             
         </style>
     </head>
     <body>
-        <form action="/#" method="post">
-            <div class="container">
-                {% csrf_token %}
-                {%load static%} 
+        <form action="#" method="post">
+            {% csrf_token %}
+            {%load static%}
+            
+            <center><div class="container">
                 <div class="backimg">
                     <img src="{%static 'background.jpg'%}" alt="backgroungimage">
                 </div>
-                  <div class="form-box">
-				<h1 id="title">Sign Up</h1>
-				
-                       
-                			
-					<div class="input-group">
-                    			<div class="input-field">
-							
-							<label for='name'></label>
-		        				<input type='text' placeholder="Enter your Name" name='name' required><br>
-		        			</div>
+                <div class="form-box">
+                    <h1 id="title">Sign Up</h1>
+                    <div class="input-group">
+                        <div class="input-field">
+                        <label for='name'></label>
+		                <input type='text' placeholder="Enter your Name" name='name' required><br>
+                        </div>
 
-						<div class="input-field">
-							
-            					<label for ='email'></label>
-            					<input type="email" placeholder="Enter email" name="email" float="right"  required><br>  
- 						</div>
-						
-						<div class="input-field">
-							
-           						<label for='password'></label>
-            					<input type="password" placeholder="Enter Password" name="password" required><br>  
-  						</div>          	
+                        <div class="input-field">
+            	        <label for ='email'></label>
+            	        <input type="email" placeholder="Enter email" name="email" float="right"  required><br>
+                        </div>  
+                        
+                        <div class="input-field">
+                        <label for='password'></label>
+            	        <input type="text" placeholder="Enter Password" name="password" required><br>
+                        </div>
+				        
 
-						<div class="input-field" id="passField">
-							
-							<label for='repassword'></label>
-                       				<input type="password" placeholder="Confirm Password" name="repassword" required>
-                    			</div>
+                        <div class="input-field">
+                        <label for="Re Enter Password"></label>
+				        <input name="repassword" placeholder="Re enter password" type="text" required=""/><br><br><br>
+                        </div>
 
-						<div class="btn-field">
-							<button type="submit"><b>Signup</b></button><br>     
-						</div>
-						Already an accounct <a href="http://localhost:8000/login/"> Login </a>     				
-            			</div>
+            	        <button type="submit"><b>Signup</b></button><br>
+                        <br>
+                        Already an account <a href="http://localhost:8000/login/"> Login </a>  
+                        </div>   
+                    </div> 
+                </div>  
+            </center>
         </form>
-			</div>
-		</div>
-        
+       
     </body>
 </html>
