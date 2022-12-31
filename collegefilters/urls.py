@@ -22,7 +22,8 @@ from login.views import loginaction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('signup.urls')),
+    path('',include('homepage.urls')),
+    path('signup/',include('signup.urls')),
     path('login/',include('login.urls')),
     
      
