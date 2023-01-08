@@ -103,7 +103,7 @@
         </style>
     </head>
     <body>
-        <form action="#" method="post">
+        <form action="#" method="post" autocomplete="off">
             {% csrf_token %}
             {%load static%}
             
@@ -126,13 +126,13 @@
                         
                         <div class="input-field">
                         <label for='password'></label>
-            	        <input type="text" placeholder="Enter Password" name="password" required><br>
+            	        <input type="password" placeholder="Enter Password" name="password" required><br>
                         </div>
 				        
 
                         <div class="input-field">
                         <label for="Re Enter Password"></label>
-				        <input name="repassword" placeholder="Re enter password" type="text" required=""/><br><br><br>
+				        <input name="repassword" placeholder="Re enter password" type="password" required/><br><br><br>
                         </div>
 
             	        <button type="submit"><b>Signup</b></button><br>

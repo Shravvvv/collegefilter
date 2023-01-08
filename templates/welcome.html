@@ -16,6 +16,13 @@
             justify-content: center;
             align-items: center;
         }
+
+        .logo h3{
+            text-align: center;
+            text-indent: 25px;
+            color: #54B4D3;
+        }
+
         .logo img{
             width: 20%;
             border: 4px solid #54B4D3;
@@ -48,8 +55,8 @@
         }
         
         .searchbar{
-            width: 30%;
-           
+            float:left;
+            width: 30%; 
         }
         
         #search{
@@ -86,17 +93,19 @@
     <nav class="navbar ">
         <ul class="nav-list">
             <div class="logo">
-                <img src="{%static 'hat.png'%}" alt="Logo">
+                <img class="logo" src="{%static 'hat.png'%}" alt="Logo">
+                <h3>Collegefilter</h3>
             </div>
 		<div class="searchbar">
             	<input type="text" name="search" id="search">
-            	<button class="btn-sm">search</button>
+            	<button class="btn btn-primary " type="button">search</button>
         </div>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#service">Services</a></li>
             <li><a href="#contact">Contact Us</a></li>
 		    <li><a href="\signup" target="_self">Sign Up</a></li>
+            <li><a href="#contact"><img src="{%static 'star.png'%}" alt="like" border="0" /></a></li>
         </ul>
     </nav>
     <br>
@@ -105,7 +114,6 @@
             <button type="button" >
                 <a href="\college">
                 <img src="{%static 'college.png'%}" alt="college" border="0" /></a><br>College
-                
             </button>
         </div>
 
