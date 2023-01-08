@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'signup',
     'login',
     'homepage',
+    'course',
+    'college',
+    'exam',
 ]
 
 MIDDLEWARE = [

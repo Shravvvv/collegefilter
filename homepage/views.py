@@ -3,5 +3,4 @@ import mysql.connector as sql
 
 
 def homepageaction(request):
-    
     return render(request,'welcome.html')
